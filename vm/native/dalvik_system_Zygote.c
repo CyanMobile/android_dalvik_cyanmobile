@@ -19,6 +19,7 @@
  */
 #include "Dalvik.h"
 #include "native/InternalNativePriv.h"
+#include <sys/resource.h>
 
 #include <signal.h>
 #include <sys/types.h>
@@ -29,7 +30,7 @@
 #include <errno.h>
 
 #if defined(HAVE_PRCTL)
-# include <sys/prctl.h>
+#include <sys/prctl.h>
 #endif
 
 #define ZYGOTE_LOG_TAG "Zygote"
